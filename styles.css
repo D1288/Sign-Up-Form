@@ -7,121 +7,72 @@
 body{
     display: flex;
     overflow: hidden;
+    background-color: antiquewhite;
 }
 
 form{
     flex-shrink: 1;
 }
 
-
-img{
+.leaf{
+    position: relative;
     width: 40vw;
     height: 100vh;
     flex-shrink: 0;
 }
-
-.leaf{
-    position: relative;
-    flex-shrink: 0;
+h1{
+    color: white;
 }
-
 .logo{
-    position: absolute;
     width: 200px;
     height: 200px;
-    flex-shrink: 0;
-    top: 50px
 }
-
 .logobackground{
+    top: 25vh;
+    width: 40vw;
     position: absolute;
-    height: 270px;
-    width: 40%;
-    background-color: rgba(5, 5, 5, .5);
-    z-index: 2;
-    top: 25%;
+    background-color: rgba(5, 5, 5,.5);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 15px;
+    justify-content: center;
     align-items: center;
 }
 
-h1{
-    position: absolute;
-    color: white;
-    z-index: 2;
-    /* left: 20%; */
-    text-align: center;
-}
 
-.contents{
-    padding: 5% 5%;
-    background-color: rgb(245, 234, 222);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-h2{
+header{
+    padding: 100px;
     line-height: 2em;
- 
+}
+
+
+legend{
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    margin-top: -50px;
 }
 
 .formheader{
-    background-color: white;
-    padding-left: 100px;
-    margin-left: -100px;
+    margin-left: 80px;
 }
 
-.formbody{
-    padding: 0;
-}
-
-button{
-    padding: .5em;
-    font-size: 16px;
-    background-color: #596D48;
-    color: white;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-left: 90px;
-    border-radius: 3px;
-
-}
 
 .info{
-    align-items: ;
+    margin-top: -10px;
     background-color: white;
-    height: 300px;
     display: flex;
-    margin-left: -100px;
-    padding: 20px;
-    width: 60vw;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 40px 20px;
     gap: 150px;
-    flex-grow: 1;
-    border-radius: 3px;
-    overflow-x: hidden;
-
-}
-
-.leftblock,
-.rightblock{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 label{
     font-size: 24px;
 }
-
 input{
-    width: 350px;
-    padding: .5em;
-    border-radius: 8px;
+    font-size: 24px;
     border: 1px solid #E5E7EB;
+    border-radius: 3px;
 }
 
 input:focus{
@@ -129,6 +80,25 @@ input:focus{
     outline: none;
 }
 
+.leftblock,
+.rightblock{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-left: 80px;
+}
+
+button{
+    background-color: #596D48;
+    color: white;
+    font-size: 20px;
+    padding: 8px 16px;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
 .login{
     font-size: 20px;
+    margin-top: 20px;
+    margin-left: 100px;
 }
