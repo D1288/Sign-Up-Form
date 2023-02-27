@@ -8,6 +8,11 @@ body{
     display: flex;
     overflow: hidden;
     background-color: antiquewhite;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    color: black;
 }
 
 form{
@@ -48,22 +53,27 @@ header{
 legend{
     background-color: white;
     padding: 20px;
-    display: flex;
     margin-top: -50px;
+    box-shadow: 0px -3px 5px -5px rgb(0, 0, 0);
 }
 
 .formheader{
     margin-left: 80px;
 }
+.headercaption{
+    margin-top: -10px;
+    margin-left: 80px;
+}
 
 
 .info{
-    margin-top: -10px;
+    margin-top: -20px;
     background-color: white;
     display: flex;
     justify-content: flex-start;
     padding: 40px 20px;
     gap: 150px;
+    box-shadow: 0px 3px 5px -5px rgb(0, 0, 0);
 }
 
 label{
@@ -78,13 +88,18 @@ input{
 input:focus{
     border: 2px solid lightblue;
     outline: none;
+    box-shadow: 0px 3px 10px rgb(41, 82, 41);
+}
+
+input:invalid{
+    border: 2px solid red;
 }
 
 .leftblock,
 .rightblock{
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 20px;
     margin-left: 80px;
 }
 
@@ -95,6 +110,7 @@ button{
     padding: 8px 16px;
     margin-left: 100px;
     margin-top: 30px;
+    border-radius: 3px;
 }
 
 .login{
@@ -102,3 +118,8 @@ button{
     margin-top: 20px;
     margin-left: 100px;
 }
+
+
+
+
+

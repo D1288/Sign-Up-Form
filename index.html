@@ -24,12 +24,12 @@
                 deepest dreams. Sign up <em>now</em> to get started. Lorem ipsum, dolor sit amet consectetur adipisicing
                 elit. Illum, qui!</h2>
                 <br>
-                <br>
             <h2>You <em>know</em> you want to!</h2>
         </header>
-        <form action="get" class="formbody">
+        <form class="formbody">
             <legend>
-                <h2 class="formheader">Let's Do This</h2>
+                <h2 class="formheader">Let's Do This</h2> <br>
+                <p class="headercaption">Fields marked with an asterisk(*) are required</p>
             </legend>
             <div class="info">
                 <div class="leftblock">
@@ -38,12 +38,19 @@
                         <input type="text" name="firstname" id="firstname">
                     </div>
                     <div>
-                        <label for="email">Email</label><br>
-                        <input type="email" name="email" id="email">
+                        <label for="email">Email*</label><br>
+                        <input type="email" name="email" id="email" required>
                     </div>
                     <div>
-                        <label for="password">Password</label><br>
-                        <input type="password" name="password" id="password">
+                        <label for="password">Password*</label><br>
+                        <input type="password" name="password" id="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"">
+                        <div id="message">
+                            <h3>Password must contain the following:</h3>
+                            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                            <p id="number" class="invalid">A <b>number</b></p>
+                            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                          </div>
                     </div>
                 </div>
                 <div class="rightblock">
@@ -56,12 +63,20 @@
                         <input type="tel" name="phone" id="phone">
                     </div>
                     <div>
-                        <label for="confirmpassword">Confirm Password</label><br>
-                        <input type="password" name="confirmpassword" id="confirmpassword">
+                        <label for="confirmpassword">Confirm Password*</label><br>
+                        <input type="password" name="confirmpassword" id="confirmpassword" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must contain a of minimum eight characters, at least one letter and one number">
+                        <div id="message">
+                            <h3>Password must contain the following:</h3>
+                            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                            <p id="number" class="invalid">A <b>number</b></p>
+                            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                            <p class="confirmMessage"></p>
+                          </div>
                     </div>
                 </div>
             </div>
-            <button type="submit">Create Account</button>
+            <button class="confirmButton">Create Account</button>
 
 
         </form>
@@ -69,6 +84,7 @@
             <p>Already Have an Account? <a href="">Log In</a></p>
         </div>
     </div>
+    <script src="myscripts.js"></script>
 </body>
 
 </html>
